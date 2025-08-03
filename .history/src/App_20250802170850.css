@@ -1,0 +1,383 @@
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+}
+
+.App {
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.promociones {
+  text-align: right;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.carrusel-promociones {
+  position: relative;
+  overflow: hidden;
+  height: 60px;
+}
+
+.promocion-activa {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  animation: fadeInOut 3s ease-in-out infinite;
+  text-align: center;
+  padding: 10px 20px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 25px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  10%, 90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Filtros */
+.filtros {
+  background: white;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 1200px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.filtro-categorias {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filtro-categorias button {
+  padding: 10px 20px;
+  border: 2px solid #ddd;
+  background: white;
+  color: #333;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.filtro-categorias button:hover {
+  border-color: #667eea;
+  color: #667eea;
+}
+
+.filtro-categorias button.activo {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+
+.filtro-extra {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filtro-extra select {
+  padding: 8px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: white;
+}
+
+/* Grid de Productos */
+.productos-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+/* Tarjeta de Producto */
+.producto-card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.producto-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.producto-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.producto-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #333;
+  text-align: center;
+}
+
+.producto-opciones {
+  margin-bottom: 20px;
+}
+
+.opcion {
+  margin-bottom: 15px;
+}
+
+.opcion label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #555;
+}
+
+.opcion select {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: white;
+  font-size: 0.9rem;
+}
+
+.cantidad-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+.cantidad-control button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.cantidad-control button:hover {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+
+.cantidad-control span {
+  font-weight: bold;
+  min-width: 30px;
+  text-align: center;
+}
+
+.producto-precio {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.precio {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #667eea;
+}
+
+.btn-agregar {
+  width: 100%;
+  padding: 12px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 1rem;
+}
+
+.btn-agregar:hover {
+  background: #218838;
+}
+
+/* Carrito */
+.carrito {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  border-top: 3px solid #667eea;
+  padding: 20px;
+  box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.carrito h3 {
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.carrito-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.carrito-item {
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  align-items: center;
+}
+
+.carrito-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.carrito-item h4 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.carrito-item p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 2px 0;
+}
+
+.carrito-total {
+  text-align: center;
+  border-top: 2px solid #eee;
+  padding-top: 15px;
+}
+
+.carrito-total h4 {
+  font-size: 1.3rem;
+  color: #667eea;
+  margin-bottom: 15px;
+}
+
+.btn-whatsapp {
+  background: #25d366;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 1rem;
+}
+
+.btn-whatsapp:hover {
+  background: #128c7e;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .logo {
+    font-size: 2rem;
+  }
+  
+  .promociones {
+    min-height: 60px;
+  }
+  
+  .carrusel-promociones {
+    height: 50px;
+  }
+  
+  .promocion-activa {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+  
+  .filtros {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .filtro-categorias {
+    justify-content: center;
+  }
+  
+  .productos-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .carrito-items {
+    grid-template-columns: 1fr;
+  }
+}
