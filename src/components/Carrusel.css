@@ -1,0 +1,52 @@
+/* Banner de Promociones */
+.promociones-banner {
+  background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
+  color: white;
+  padding: 15px 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+/* Carrusel de Promociones */
+.carrusel-container {
+  width: 100%;
+  background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
+  padding: 15px 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.carrusel-promociones {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.promocion-activa {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  padding: 10px 30px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 30px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255,255,255,0.3);
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+  white-space: nowrap;
+  animation: fadeInOut 3s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% {  opacity: 0; transform: translateX(50px); }
+  10%, 90% { opacity: 1; transform: translateX(0); }
+  100% { opacity: 0; transform: translateX(-50px); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .carrusel-promociones { height: 50px; }
+  .promocion-activa { font-size: 1rem; padding: 8px 20px; }
+} 

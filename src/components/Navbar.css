@@ -1,0 +1,55 @@
+.navbar {
+  background: #2196F3;
+  color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+}
+
+/* Filtros de Categorías */
+.navbar-filtros { display: flex; align-items: center; gap: 10px; }
+
+.navbar-filtros button {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.navbar-filtros button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.navbar-filtros button.activo {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar-container { padding: 0 10px; height: 55px; }
+  .navbar-filtros { gap: 8px;}
+  .navbar-filtros button { padding: 6px 12px; font-size: 0.8rem; }
+}
+
+@media (max-width: 480px) {
+  .navbar-container { padding: 0 8px; height: 50px; }
+  .navbar-filtros { gap: 6px; }
+  .navbar-filtros button { padding: 5px 10px; font-size: 0.7rem; }
+} 
