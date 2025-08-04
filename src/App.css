@@ -14,70 +14,9 @@ body {
   min-height: 100vh;
 }
 
-/* Header */
-.header {
-  background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
-  color: white;
-  padding: 20px 0;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
 
-.header-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.logo {
-  font-size: 2.5rem;
-  font-weight: bold;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-}
 
-/* Carrusel de Promociones */
-.carrusel-container {
-  width: 100%;
-  background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
-  padding: 15px 0;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-.carrusel-promociones {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 60px;
-}
-
-.promocion-activa {
-  margin: 0;
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: white;
-  animation: fadeInOut 3s ease-in-out infinite;
-  text-align: center;
-  padding: 10px 30px;
-  background: rgba(255,255,255,0.15);
-  border-radius: 30px;
-  backdrop-filter: blur(10px);
-  border: 2px solid rgba(255,255,255,0.3);
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-}
-
-@keyframes fadeInOut {
-  0%, 100% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  10%, 90% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 /* Filtros */
 .filtros {
@@ -476,16 +415,6 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
-  .header-content {
-    flex-direction: column;
-    text-align: center;
-    gap: 15px;
-  }
-  
-  .logo {
-    font-size: 2rem;
-  }
-  
   .carrusel-promociones {
     height: 50px;
   }
